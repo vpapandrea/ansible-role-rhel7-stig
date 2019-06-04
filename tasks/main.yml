@@ -1,3 +1,23 @@
+- name: Audit chown 64 bit
+  lineinfile:
+    path: /etc/audit/rules.d/audit.rules
+    state: present
+    regexp: '^-a always,exit -F arch=b64 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod$'
+    line: '-a always,exit -F arch=b64 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+  when:
+    - medium_severity | bool
+    - ansible_architecture == "x86_64"
+
+- name: Audit fchown 64 bit
+  lineinfile:
+    path: /etc/audit/rules.d/audit.rules
+    state: present
+    regexp: '^-a always,exit -F arch=b64 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod$'
+    line: '-a always,exit -F arch=b64 -S chown -F auid>=1000 -F auid!=4294967295 -k perm_mod'
+  when:
+    - medium_severity | bool
+    - ansible_architecture == "x86_64"
+
 - name: get back mount information associated to mountpoint
   command: findmnt --fstab '{{ var_removable_partition }}'
   register: device_name
