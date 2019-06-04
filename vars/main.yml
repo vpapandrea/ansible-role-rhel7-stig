@@ -36,5 +36,5 @@ var_accounts_fail_delay: '4'
 var_accounts_tmout: '600'
 sshd_idle_timeout_value: '600'
 var_sshd_set_keepalive: '0'
-sshd_approved_macs: hmac-sha2-512,hmac-sha2-256,hmac-sha1,hmac-sha1-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
+sshd_approved_macs: hmac-sha2-256,hmac-sha2-512
 var_sssd_ldap_tls_ca_dir: /etc/openldap/cacerts

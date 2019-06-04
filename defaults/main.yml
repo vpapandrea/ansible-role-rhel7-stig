@@ -24,6 +24,7 @@ accounts_passwords_pam_faillock_unlock_time: true
 accounts_tmout: true
 accounts_umask_etc_login_defs: true
 aide_periodic_cron_checking: true
+audit_rules_rulesd: true
 audit_rules_dac_modification_chmod: true
 audit_rules_dac_modification_chown: true
 audit_rules_dac_modification_fchmod: true
@@ -85,6 +86,7 @@ auditd_audispd_encrypt_sent_records: true
 auditd_data_retention_action_mail_acct: true
 auditd_data_retention_space_left: true
 auditd_data_retention_space_left_action: true
+auditd_disk_full_action: true
 clean_components_post_updating: true
 configure_strategy: true
 dconf_gnome_banner_enabled: true
@@ -109,6 +111,7 @@ file_permissions_sshd_private_key: true
 file_permissions_sshd_pub_key: true
 gnome_gdm_disable_automatic_login: true
 gnome_gdm_disable_guest_login: true
+gnome_screensaver_display: true
 high_complexity: true
 high_disruption: true
 high_severity: true
@@ -130,6 +133,8 @@ package_screen_installed: true
 package_vsftpd_removed: true
 package_ypserv_removed: true
 patch_strategy: true
+postlogin_message: true
+pamd_require_password_retry: true
 reboot_required: true
 restrict_strategy: true
 rpm_verify_hashes: true
@@ -147,6 +152,7 @@ service_sshd_enabled: true
 set_password_hashing_algorithm_libuserconf: true
 set_password_hashing_algorithm_logindefs: true
 skip_ansible_lint: true
+sshd_enable_banner: true
 sshd_allow_only_protocol2: true
 sshd_disable_compression: true
 sshd_disable_empty_passwords: true
