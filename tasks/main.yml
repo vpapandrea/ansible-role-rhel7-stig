@@ -15612,11 +15612,9 @@
 
 - name: Enable SSH Warning Banner
   lineinfile:
-    create: true
-    dest: /etc/ssh/sshd_config
-    regexp: ^Banner
-    line: Banner /etc/issue
-    validate: /usr/sbin/sshd -t -f %s
+    path: /etc/issue
+    regexp: '.*'
+    line: '{{ login_banner_text }}'
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
   - sshd_enable_warning_banner | bool
