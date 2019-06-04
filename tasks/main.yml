@@ -16414,27 +16414,6 @@
   - NIST-800-53-CM-6(b)
   - DISA-STIG-RHEL-07-021300
 
-- name: Ensure xorg-x11-server-common is removed
-  package:
-    name: xorg-x11-server-common
-    state: absent
-  tags:
-  - package_xorg-x11-server-common_removed
-  - medium_severity
-  - disable_strategy
-  - low_complexity
-  - low_disruption
-  - no_reboot_needed
-  - CCE-27218-7
-  - NIST-800-53-AC-17(8).1(ii)
-  - DISA-STIG-RHEL-07-040730
-  when:
-  - disable_strategy | bool
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
-
 - name: Ensure ypserv is removed
   package:
     name: ypserv
