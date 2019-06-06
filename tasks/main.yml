@@ -1,3 +1,11 @@
+- name: Setting sshd banner
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '^#[B|b]anner(.*)$'
+    replace: 'Banner /etc/issue'
+  tags:
+    - sshd_banner
+
 - name: Audit chown in rulesd 64 bit
   lineinfile:
     path: /etc/audit/rules.d/audit.rules

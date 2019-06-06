@@ -1,6 +1,7 @@
 ---
 # defaults file for rhel7_stig
 
+sshd_banner: true
 account_disable_post_pw_expiration: true
 accounts_logon_fail_delay: true
 accounts_max_concurrent_login_sessions: true
